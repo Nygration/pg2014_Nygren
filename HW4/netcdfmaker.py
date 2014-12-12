@@ -107,12 +107,12 @@ class slosh(object):
         nc.close()
         
 if __name__ =='__main__':        
-        initial=np.array([1.0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,1.0])
-        basin1=slosh(initial)
-        basin1.makenet('everyten',steps=101,save_every=10)
-        netbasin1=netCDF4.Dataset('everyten.nc')
-        print 'the variable keys are:', netbasin1.variables.keys()
-        print 'the length of the basin is %d' % len(initial)
-        print 'the number of steps taken was %d, but the inital state was also stored' % int(101.0/10.0)
-        print 'the shape of eta is:', np.shape(netbasin1.variables['eta'][:])
+    initial=np.array([1.0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,1.0])
+    basin1=slosh(initial)
+    basin1.makenet('everyten',steps=101,save_every=10)
+    netbasin1=netCDF4.Dataset('everyten.nc')
+    print 'the variable keys are:', netbasin1.variables.keys()
+    print 'the length of the basin is %d' % len(initial)
+    print 'the number of steps taken was %d, but the inital state was also stored' % int(101.0/10.0)
+    print 'the shape of eta is:', np.shape(netbasin1.variables['eta'][:])
         

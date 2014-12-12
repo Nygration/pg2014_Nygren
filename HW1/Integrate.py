@@ -5,5 +5,8 @@ part 2 write a function that computes the integral of a list of numers by the tr
 """
 def integrate(f,dx=1.0):
     """This function will take a list of numbers as an argument f, and integrate using the trapezoidal rule """
-    print (dx*sum(f)-((f[0]+f[-1])/2)) # trapazoidal just adds a half the sum of two numbers, and runs through so it adds two halves of each number except the fist and last. 
+    return (dx*sum(f)-((f[0]+f[-1])/2)) # trapazoidal just adds a half the sum of two numbers, and runs through so it adds two halves of each number except the fist and last. 
         
+if __name__=='__main__':
+    example=[1,3,4,5] # make a list of numbers
+    print integrate(example) # integrate

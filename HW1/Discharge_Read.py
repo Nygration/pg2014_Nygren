@@ -20,3 +20,8 @@ def discharge_read(filename):
         readable_list.append(paired_data)
     
     return readable_list # returns the list of paired dates and discharges it takes a little while as 
+
+if __name__ == '__main__':
+    thefile='discharge.dat'
+    datapairs=discharge_read(thefile)
+    print datapairs[:5] #print the 1st 5 data pairs

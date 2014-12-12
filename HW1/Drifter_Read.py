@@ -10,8 +10,8 @@ def read_drifter(filename):
     
     rawfile=open(filename) # gives me something to work with, keeping the formatting of the original file
     filestring=rawfile.read() # reads in the file, but for some reason there is extra white space between each character, very aggrivating
-    cleanfilestring=filestring[::2] # it looks like the blank space is after every character so I'll remove all the even indexed characters, still not sure where the wierd character at the beginning came from
-    lines1=cleanfilestring.split("\n") # break it into lines
+    #cleanfilestring=filestring[::2] # it looks like the blank space is after every character so I'll remove all the even indexed characters, still not sure where the wierd character at the beginning came from
+    lines1=filestring.split("\n") # break it into lines
     thedictionary={} # empty dictionary that I'll add keys to
     keyname=' ' # empty key name that I'll fill when I get a new key and then use it in the for loop to fill the values.
     #keylist=[] # an empty list that I will append and set equal to the current key
@@ -26,3 +26,6 @@ def read_drifter(filename):
             thedictionary[keyname].append(latlon) # add the new lat/lon pair to the current list
     return thedictionary # return the dictionary they want
 
+drifterfile='drifter.dat' #choose the correct file
+drifterdict=read_drifter(drifterfile) #make the dictionary
+print drifterdict.keys() # print all the keys (frodo, samwise, etc.)

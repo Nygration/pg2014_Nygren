@@ -26,4 +26,7 @@ def fibn(n,x=1,y=1):
             fiblist.append(newsum)  # update the list with the new sum            
             holder1=holder2         # point at the new 2nd to last number on the list
             holder2=newsum          # point at the new last number in the list
-    print fiblist                   # GIVE 'EM WHAT THEY WANT!
+    return fiblist                   # GIVE 'EM WHAT THEY WANT!
+
+if __name__=='__main__':
+    print fibn(10) #print the 1st ten numbers in the sequence
